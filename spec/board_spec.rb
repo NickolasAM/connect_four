@@ -17,12 +17,15 @@ RSpec.describe Board do
     end
   end
 
-  describe 'prints board' do
+  describe '#prints board' do
     it 'can render board' do
-      board.render_board
       expect(board.render_board).to be_a Array
     end
+
+    it 'can print board' do
+      board.print_board
+      require 'pry'; binding.pry
+      expect(board.print_board).to eq false
+    end
   end
-
-
 end
