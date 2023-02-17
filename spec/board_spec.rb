@@ -8,7 +8,13 @@ RSpec.describe Board do
   end
 
   describe '#has attributes' do
-  
+    it 'has cells' do
+      expect(board.cells).to be_a Array
+    end
+
+    it 'has columns' do
+      expect(board.columns).to be_a Hash
+    end
   end
 
 
