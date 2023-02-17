@@ -7,5 +7,7 @@ RSpec.describe Cell do
     expect(cell).to be_an_instance_of(Cell)
   end
 
-  
+  it 'has a value' do
+    expect(cell.value).to eq(".")
+  end
 end

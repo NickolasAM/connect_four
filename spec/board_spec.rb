@@ -2,6 +2,7 @@ require 'spec_helper'
 
 RSpec.describe Board do
   let(:board) {Board.new}
+  
 
   it 'exists' do
     expect(board).to be_an_instance_of(Board)
@@ -23,9 +24,7 @@ RSpec.describe Board do
     end
 
     it 'can print board' do
-      board.print_board
-      require 'pry'; binding.pry
-      expect(board.print_board).to eq false
+      expect(board.main_menu).to eq false
     end
   end
 end
