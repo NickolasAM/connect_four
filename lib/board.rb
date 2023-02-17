@@ -18,24 +18,32 @@ class Board
   def render_board
     @cells.map do |array|
       array.map do |cell|
-        cell
+        cell.value
       end
     end
   end
 
   def print_board
-    if @show == true
-      render_board
-      puts "ABCDEFG"
-      puts "#{render_board[0]}"
-      puts "#{render_board[1]}"
-      puts "#{render_board[2]}"
-      puts "#{render_board[3]}"
-      puts "#{render_board[4]}"
-      puts "#{render_board[5]}"
-    else
-      puts "Press P to play connect4, Press Q to quit"
-      return false
-    end
+    render_board
+    puts "ABCDEFG"
+    puts "#{render_board[0].join}"
+    puts "#{render_board[1].join}"
+    puts "#{render_board[2].join}"
+    puts "#{render_board[3].join}"
+    puts "#{render_board[4].join}"
+    puts "#{render_board[5].join}"
   end
+
+  def main_menu
+    puts "Welcome to Connect4!" #Add ASCCI Art
+    puts "Press P to play Connect4, Press Q to quit"
+    start = gets.chomp.upcase
+    if start == "P"
+      print_board
+    elsif start == "Q"
+      puts "OK, Have A Nice Day!"
+    end
+    return false
+  end
+
 end
