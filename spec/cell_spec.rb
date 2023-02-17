@@ -6,4 +6,6 @@ RSpec.describe Cell do
   it "exists" do        
     expect(cell).to be_an_instance_of(Cell)
   end
+
+  
 end

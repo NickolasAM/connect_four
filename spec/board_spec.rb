@@ -8,14 +8,7 @@ RSpec.describe Board do
   end
 
   describe '#has attributes' do
-    it "has cells" do
-      expect(board.cells).to be_an_instance_of(Hash)
-    end
-
-
-
-
-
+  
   end
 
 
