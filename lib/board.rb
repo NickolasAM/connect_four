@@ -3,6 +3,7 @@ class Board
               :columns
 
   def initialize
+    @show = false
     @cells = [
       [Cell.new("A", 6), Cell.new("B", 6), Cell.new("C", 6), Cell.new("D", 6), Cell.new("E", 6), Cell.new("F", 6), Cell.new("G", 6)],
       [Cell.new("A", 5), Cell.new("B", 5), Cell.new("C", 5), Cell.new("D", 5), Cell.new("E", 5), Cell.new("F", 5), Cell.new("G", 5)],
@@ -22,4 +23,19 @@ class Board
     end
   end
 
+  def print_board
+    if @show == true
+      render_board
+      puts "ABCDEFG"
+      puts "#{render_board[0]}"
+      puts "#{render_board[1]}"
+      puts "#{render_board[2]}"
+      puts "#{render_board[3]}"
+      puts "#{render_board[4]}"
+      puts "#{render_board[5]}"
+    else
+      puts "Press P to play connect4, Press Q to quit"
+      return false
+    end
+  end
 end
