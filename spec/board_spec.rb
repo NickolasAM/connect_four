@@ -17,6 +17,12 @@ RSpec.describe Board do
     end
   end
 
+  describe 'prints board' do
+    it 'can render board' do
+      board.render_board
+      expect(board.render_board).to be_a Array
+    end
+  end
 
 
 end

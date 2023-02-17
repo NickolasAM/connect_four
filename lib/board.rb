@@ -1,7 +1,7 @@
 class Board
   attr_reader :cells,
               :columns
-              
+
   def initialize
     @cells = [
       [Cell.new("A", 6), Cell.new("B", 6), Cell.new("C", 6), Cell.new("D", 6), Cell.new("E", 6), Cell.new("F", 6), Cell.new("G", 6)],
@@ -12,6 +12,14 @@ class Board
       [Cell.new("A", 1), Cell.new("B", 1), Cell.new("C", 1), Cell.new("D", 1), Cell.new("E", 1), Cell.new("F", 1), Cell.new("G", 1)]
     ]
     @columns = {"A" => [], "B" => [], "C" => [], "D" => [], "E" => [], "F" => [],}
+  end
+
+  def render_board
+    @cells.map do |array|
+      array.map do |cell|
+        cell
+      end
+    end
   end
 
 end
