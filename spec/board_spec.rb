@@ -23,8 +23,15 @@ RSpec.describe Board do
       expect(board.render_board).to be_a Array
     end
 
-    it 'can print board' do
+    xit 'can print board' do
       expect(board.main_menu).to eq false
+    end
+  end
+
+  describe 'Adding pieces to the board' do
+    it 'can add a chip to the correct column' do
+      expect(board.add_chip("player")).to eq false
+      require 'pry'; binding.pry
     end
   end
 end

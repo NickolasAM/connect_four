@@ -12,7 +12,7 @@ class Board
       [Cell.new("A", 2), Cell.new("B", 2), Cell.new("C", 2), Cell.new("D", 2), Cell.new("E", 2), Cell.new("F", 2), Cell.new("G", 2)],
       [Cell.new("A", 1), Cell.new("B", 1), Cell.new("C", 1), Cell.new("D", 1), Cell.new("E", 1), Cell.new("F", 1), Cell.new("G", 1)]
     ]
-    @columns = {"A" => [], "B" => [], "C" => [], "D" => [], "E" => [], "F" => [],}
+    @columns = {"A" => [], "B" => [], "C" => [], "D" => [], "E" => [], "F" => [], "G" => []}
   end
 
   def render_board
@@ -42,6 +42,32 @@ class Board
       print_board
     elsif start == "Q"
       puts "OK, Have A Nice Day!"
+    end
+    return false
+  end
+
+  def add_chip(user) 
+    location = "#{gets.chomp.upcase}"
+    if location = "A"
+      @columns["A"] << Chip.new.type[user]
+    end
+    if location = "B"
+      @columns["B"] << Chip.new.type[user]
+    end
+    if location = "C"
+      @columns["C"] << Chip.new.type[user]
+    end
+    if location = "D"
+      @columns["D"] << Chip.new.type[user]
+    end
+    if location = "E"
+      @columns["E"] << Chip.new.type[user]
+    end
+    if location = "F"
+      @columns["F"] << Chip.new.type[user]
+    end
+    if location = "G"
+      @columns["G"] << Chip.new.type[user]
     end
     return false
   end
