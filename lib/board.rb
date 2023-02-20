@@ -3,7 +3,6 @@ class Board
               :columns
 
   def initialize
-    @show = false
     @cells = [
       [Cell.new("A", 6), Cell.new("B", 6), Cell.new("C", 6), Cell.new("D", 6), Cell.new("E", 6), Cell.new("F", 6), Cell.new("G", 6)],
       [Cell.new("A", 5), Cell.new("B", 5), Cell.new("C", 5), Cell.new("D", 5), Cell.new("E", 5), Cell.new("F", 5), Cell.new("G", 5)],
@@ -47,29 +46,51 @@ class Board
   end
 
   def add_chip(user) 
+    puts "what column do you want your piece in?"
     location = "#{gets.chomp.upcase}"
-    if location = "A"
+    if location == "A"
       @columns["A"] << Chip.new.type[user]
+      @cells[5][0].value = columns["A"][0]
+      render_board
+      print_board
     end
-    if location = "B"
+    if location == "B"
       @columns["B"] << Chip.new.type[user]
+      @cells[5][1].value = columns["B"][0]
+      render_board
+      print_board
     end
-    if location = "C"
+    if location == "C"
       @columns["C"] << Chip.new.type[user]
+      @cells[5][2].value = columns["C"][0]
+      render_board
+      print_board
     end
-    if location = "D"
+    if location == "D"
       @columns["D"] << Chip.new.type[user]
+      @cells[5][3].value = columns["D"][0]
+      render_board
+      print_board
     end
-    if location = "E"
+    if location == "E"
       @columns["E"] << Chip.new.type[user]
+      @cells[5][4].value = columns["E"][0]
+      render_board
+      print_board
     end
-    if location = "F"
+    if location == "F"
       @columns["F"] << Chip.new.type[user]
+      @cells[5][5].value = columns["F"][0]
+      render_board
+      print_board
     end
-    if location = "G"
+    if location == "G"
       @columns["G"] << Chip.new.type[user]
+      @cells[5][6].value = columns["G"][0]
+      render_board
+      print_board
     end
     return false
   end
-
+  
 end
