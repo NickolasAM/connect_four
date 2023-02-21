@@ -53,55 +53,91 @@ class Board
     return false
   end
 
+
   def add_chip(user) 
     # require 'pry'; binding.pry
     while add_columns < 42 do
       puts "what column do you want your piece in?"
       location = "#{gets.chomp.upcase}"
       if location == "A"
+        gravity = -1
         @columns["A"] << Chip.new.type[user]
-        @cells[5][0].value = columns["A"][0]
+        gravity += @columns["A"].count
+        if gravity > 5 
+          return puts "Choose another coulumn!"
+        end
+        @cells[5 - gravity][0].value = columns["A"][0] ## We will use .last in iteration 3
         render_board
         print_board
       end
       if location == "B"
+        gravity = -1
         @columns["B"] << Chip.new.type[user]
-        @cells[5][1].value = columns["B"][0]
+        gravity += @columns["B"].count
+        if gravity > 5 
+          return puts "Choose another coulumn!"
+        end
+        @cells[5 - gravity][1].value = columns["B"][0]
         render_board
         print_board
       end
       if location == "C"
+        gravity = -1
         @columns["C"] << Chip.new.type[user]
-        @cells[5][2].value = columns["C"][0]
+        gravity += @columns["C"].count
+        if gravity > 5 
+          return puts "Choose another coulumn!"
+        end
+        @cells[5 - gravity][2].value = columns["C"][0]
         render_board
         print_board
       end
       if location == "D"
+        gravity = -1
         @columns["D"] << Chip.new.type[user]
-        @cells[5][3].value = columns["D"][0]
+        gravity += @columns["D"].count
+        if gravity > 5 
+          return puts "Choose another coulumn!"
+        end
+        @cells[5 - gravity][3].value = columns["D"][0]
         render_board
         print_board
       end
       if location == "E"
+        gravity = -1
         @columns["E"] << Chip.new.type[user]
-        @cells[5][4].value = columns["E"][0]
+        gravity += @columns["E"].count
+        if gravity > 5 
+          return puts "Choose another coulumn!"
+        end
+        @cells[5 - gravity][4].value = columns["E"][0]
         render_board
         print_board
       end
       if location == "F"
+        gravity = -1
         @columns["F"] << Chip.new.type[user]
-        @cells[5][5].value = columns["F"][0]
+        gravity += @columns["F"].count
+        if gravity > 5 
+          return puts "Choose another coulumn!"
+        end
+        @cells[5 - gravity][5].value = columns["F"][0]
         render_board
         print_board
       end
       if location == "G"
+        gravity = -1
         @columns["G"] << Chip.new.type[user]
-        @cells[5][6].value = columns["G"][0]
+        gravity += @columns["G"].count
+        if gravity > 5 
+          return puts "Choose another coulumn!"
+        end
+        @cells[5 - gravity][6].value = columns["G"][0]
         render_board
         print_board
       end
     end
     return false
   end
-
+  
 end

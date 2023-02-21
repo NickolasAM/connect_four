@@ -8,4 +8,13 @@ class Cell
     @value = "."
   end
 
+  ## Might use these methods when refactoring code later.
+  # def value
+  #   @value
+  # end
+
+  # def set_value(value)
+  #   @value = value
+  # end
+
 end
