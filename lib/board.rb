@@ -21,7 +21,7 @@ dclass Board
     end
     return total_moves
   end
-  
+
   def render_board
     @cells.map do |array|
       array.map do |cell|
@@ -54,6 +54,7 @@ dclass Board
   end
 
   def add_chip(user) 
+    while add_columns < 42 do
     puts "what column do you want your piece in?"
     location = "#{gets.chomp.upcase}"
     if location == "A"
