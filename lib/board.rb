@@ -1,4 +1,4 @@
-class Board
+dclass Board
   attr_reader :cells,
               :columns
 
@@ -12,6 +12,14 @@ class Board
       [Cell.new("A", 1), Cell.new("B", 1), Cell.new("C", 1), Cell.new("D", 1), Cell.new("E", 1), Cell.new("F", 1), Cell.new("G", 1)]
     ]
     @columns = {"A" => [], "B" => [], "C" => [], "D" => [], "E" => [], "F" => [], "G" => []}
+  end
+
+  def add_columns
+    @columns.values.each do |column|
+      total_moves = column.sum
+
+    end
+    return add_columns
   end
 
   def render_board
@@ -93,4 +101,11 @@ class Board
     return false
   end
   
+  def who_wins(strings) 
+    if string.include?("xxxx")
+      puts "Player wins!"
+    elseif string.include?("oooo") 
+      puts "Computer Wins"
+    end
+  end
 end
