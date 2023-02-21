@@ -30,7 +30,7 @@ RSpec.describe Board do
     end
   end
 
-  xdescribe '#add_chip to the board' do
+  describe 'Adding pieces to the board' do
     it 'can add a chip to the correct column' do
       expect(board.cells[5][0].value).to eq(".")
       board.cells[5][0].value = "x"
@@ -42,11 +42,11 @@ RSpec.describe Board do
     it 'can show chip' do
       board.add_chip("player")
     end
+  end
 
-    describe 'adding total moves' do
-      it 'can add total moves' do
-        expect(board.add_columns).to eq(0)
-      end
+  describe 'adding total moves' do
+    it 'can add total moves' do
+      expect(board.add_columns).to eq(0)
     end
   end
 end

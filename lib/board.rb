@@ -1,4 +1,4 @@
-dclass Board
+class Board
   attr_reader :cells,
               :columns
 
@@ -54,53 +54,54 @@ dclass Board
   end
 
   def add_chip(user) 
+    # require 'pry'; binding.pry
     while add_columns < 42 do
-    puts "what column do you want your piece in?"
-    location = "#{gets.chomp.upcase}"
-    if location == "A"
-      @columns["A"] << Chip.new.type[user]
-      @cells[5][0].value = columns["A"][0]
-      render_board
-      print_board
-    end
-    if location == "B"
-      @columns["B"] << Chip.new.type[user]
-      @cells[5][1].value = columns["B"][0]
-      render_board
-      print_board
-    end
-    if location == "C"
-      @columns["C"] << Chip.new.type[user]
-      @cells[5][2].value = columns["C"][0]
-      render_board
-      print_board
-    end
-    if location == "D"
-      @columns["D"] << Chip.new.type[user]
-      @cells[5][3].value = columns["D"][0]
-      render_board
-      print_board
-    end
-    if location == "E"
-      @columns["E"] << Chip.new.type[user]
-      @cells[5][4].value = columns["E"][0]
-      render_board
-      print_board
-    end
-    if location == "F"
-      @columns["F"] << Chip.new.type[user]
-      @cells[5][5].value = columns["F"][0]
-      render_board
-      print_board
-    end
-    if location == "G"
-      @columns["G"] << Chip.new.type[user]
-      @cells[5][6].value = columns["G"][0]
-      render_board
-      print_board
+      puts "what column do you want your piece in?"
+      location = "#{gets.chomp.upcase}"
+      if location == "A"
+        @columns["A"] << Chip.new.type[user]
+        @cells[5][0].value = columns["A"][0]
+        render_board
+        print_board
+      end
+      if location == "B"
+        @columns["B"] << Chip.new.type[user]
+        @cells[5][1].value = columns["B"][0]
+        render_board
+        print_board
+      end
+      if location == "C"
+        @columns["C"] << Chip.new.type[user]
+        @cells[5][2].value = columns["C"][0]
+        render_board
+        print_board
+      end
+      if location == "D"
+        @columns["D"] << Chip.new.type[user]
+        @cells[5][3].value = columns["D"][0]
+        render_board
+        print_board
+      end
+      if location == "E"
+        @columns["E"] << Chip.new.type[user]
+        @cells[5][4].value = columns["E"][0]
+        render_board
+        print_board
+      end
+      if location == "F"
+        @columns["F"] << Chip.new.type[user]
+        @cells[5][5].value = columns["F"][0]
+        render_board
+        print_board
+      end
+      if location == "G"
+        @columns["G"] << Chip.new.type[user]
+        @cells[5][6].value = columns["G"][0]
+        render_board
+        print_board
+      end
     end
     return false
   end
-  
-  
+
 end
