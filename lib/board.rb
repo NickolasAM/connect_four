@@ -15,13 +15,13 @@ dclass Board
   end
 
   def add_columns
-    @columns.values.each do |column|
-      total_moves = column.sum
-
+    total_moves = 0
+    @columns.values.each do |column|   
+      total_moves += column.count
     end
-    return add_columns
+    return total_moves
   end
-
+  
   def render_board
     @cells.map do |array|
       array.map do |cell|
@@ -101,11 +101,5 @@ dclass Board
     return false
   end
   
-  def who_wins(strings) 
-    if string.include?("xxxx")
-      puts "Player wins!"
-    elseif string.include?("oooo") 
-      puts "Computer Wins"
-    end
-  end
+  
 end
