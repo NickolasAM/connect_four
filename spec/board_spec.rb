@@ -43,4 +43,10 @@ RSpec.describe Board do
       board.add_chip("player")
     end
   end
+
+  describe 'adding total moves' do
+    it 'can add total moves' do
+      expect(board.add_columns).to eq(0)
+    end
+  end
 end
