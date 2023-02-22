@@ -66,7 +66,7 @@ class Board
         if gravity > 5 
           return puts "Choose another coulumn!"
         end
-        @cells[5 - gravity][0].value = columns["A"][0] ## We will use .last in iteration 3
+        @cells[5 - gravity][0].value = columns["A"].last
         render_board
         print_board
       end
@@ -77,7 +77,7 @@ class Board
         if gravity > 5 
           return puts "Choose another coulumn!"
         end
-        @cells[5 - gravity][1].value = columns["B"][0]
+        @cells[5 - gravity][1].value = columns["B"].last
         render_board
         print_board
       end
@@ -88,7 +88,7 @@ class Board
         if gravity > 5 
           return puts "Choose another coulumn!"
         end
-        @cells[5 - gravity][2].value = columns["C"][0]
+        @cells[5 - gravity][2].value = columns["C"].last
         render_board
         print_board
       end
@@ -99,7 +99,7 @@ class Board
         if gravity > 5 
           return puts "Choose another coulumn!"
         end
-        @cells[5 - gravity][3].value = columns["D"][0]
+        @cells[5 - gravity][3].value = columns["D"].last
         render_board
         print_board
       end
@@ -110,7 +110,7 @@ class Board
         if gravity > 5 
           return puts "Choose another coulumn!"
         end
-        @cells[5 - gravity][4].value = columns["E"][0]
+        @cells[5 - gravity][4].value = columns["E"].last
         render_board
         print_board
       end
@@ -121,7 +121,7 @@ class Board
         if gravity > 5 
           return puts "Choose another coulumn!"
         end
-        @cells[5 - gravity][5].value = columns["F"][0]
+        @cells[5 - gravity][5].value = columns["F"].last
         render_board
         print_board
       end
@@ -132,7 +132,7 @@ class Board
         if gravity > 5 
           return puts "Choose another coulumn!"
         end
-        @cells[5 - gravity][6].value = columns["G"][0]
+        @cells[5 - gravity][6].value = columns["G"].last
         render_board
         print_board
       end
