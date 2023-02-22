@@ -15,7 +15,13 @@ class Game
     h_w = @cellsrow.count_left + row.count_right >= 3 # 4 including the current cell
   end
 
-  
+  def player_verticle_win
+    column_string = []
+    @board.columns.values.each do |column|
+      column_string << column.join
+    end
+    return column_string
+  end
   # def tie
   #   board.map(&:last).none? { |cell| cell == '.' }
   # end
