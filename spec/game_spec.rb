@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 RSpec.describe Game do
-
   let(:game) {Game.new}
 
   it "exists" do
@@ -43,6 +42,6 @@ RSpec.describe Game do
   # xit 'can play game' do
   #   game.game
   # end
-
-
+  
+  
 end
