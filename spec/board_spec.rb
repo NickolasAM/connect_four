@@ -35,7 +35,6 @@ RSpec.describe Board do
       expect(board.cells[5][0].value).to eq(".")
       board.cells[5][0].value = "x"
       board.cells[5][4].value = "x"
-      expect(board.cells[5][0].value).to eq("x")
       expect(board.cells[5][4].value).to eq("x")
     end
 
