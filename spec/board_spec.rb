@@ -57,10 +57,4 @@ RSpec.describe Board do
       expect(board.add_columns).to eq(0)
     end
   end
-
-  describe 'adding total moves' do
-    it 'can add total moves' do
-      expect(board.add_columns).to eq(0)
-    end
-  end
 end
