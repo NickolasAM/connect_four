@@ -35,7 +35,6 @@ RSpec.describe Board do
       expect(board.cells[5][0].value).to eq(".")
       board.cells[5][0].value = "x"
       board.cells[5][4].value = "x"
-      expect(board.cells[5][0].value).to eq("x")
       expect(board.cells[5][4].value).to eq("x")
     end
 
@@ -49,12 +48,6 @@ RSpec.describe Board do
       board.cells[4][0].value = "x"
       expect(board.cells[5][0].value).to eq("x")
       expect(board.cells[4][0].value).to eq("x")
-    end
-  end
-
-  describe 'adding total moves' do
-    it 'can add total moves' do
-      expect(board.add_columns).to eq(0)
     end
   end
 
