@@ -71,7 +71,12 @@ class Board
 
   def add_chip(user) 
     puts "what column do you want your piece in?"
-    location = "#{gets.chomp.upcase}"
+      if user == "computer"
+        location_array = ["A","B","C","D","E","F","G"]
+        location = location_array.sample
+      else
+        location = "#{gets.chomp.upcase}"
+      end
     if location == "A"
       gravity = -1
       @columns["A"] << Chip.new.type[user]
