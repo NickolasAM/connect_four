@@ -38,18 +38,12 @@ RSpec.describe Game do
       expect(game.diagonal_win.include?("xxxx")).to eq true
     end
 
-    xit '#check win' do
+    it '#check win' do
     game.board.cells[5][0].value = "x"
     game.board.cells[5][1].value = "x"
     game.board.cells[5][2].value = "x"
     game.board.cells[5][3].value = "x"
     expect(game.check_win).to be true
     end
-  end
-
-  it 'can play game' do
-    game.start_game
-  end
-  
-  
+  end  
 end
