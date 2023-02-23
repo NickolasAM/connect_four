@@ -30,7 +30,15 @@ RSpec.describe Game do
       expect(game.horizontal_win.include?("xxxx...")).to eq true
     end
 
-    it '#check win' do
+    it 'check for player and computer diagonal win' do
+      game.board.cells[2][0].value = "x"
+      game.board.cells[3][1].value = "x"
+      game.board.cells[4][2].value = "x"
+      game.board.cells[5][3].value = "x"
+      expect(game.diagonal_win.include?("xxxx")).to eq true
+    end
+
+    xit '#check win' do
     game.board.cells[5][0].value = "x"
     game.board.cells[5][1].value = "x"
     game.board.cells[5][2].value = "x"
@@ -39,9 +47,9 @@ RSpec.describe Game do
     end
   end
 
-  # xit 'can play game' do
-  #   game.game
-  # end
+  it 'can play game' do
+    game.start_game
+  end
   
   
 end
