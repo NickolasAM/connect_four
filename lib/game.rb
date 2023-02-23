@@ -24,7 +24,19 @@ class Game
     end
     return row_string
   end
-
+  
+  def diagonal_win
+    diagonal_string = []
+    @board.diagonals.each do |diagonal|
+      diagonal_value_array = []
+      diagonal.each do |cell|
+        diagonal_value_array << cell.value
+      end
+      diagonal_string << diagonal_value_array.join
+    end
+    return diagonal_string
+  end
+  
   def check_win
     horizontal_win.each do |row|
       if row.include?("xxxx")
@@ -46,17 +58,26 @@ class Game
         return true
       end
     end
+    diagonal_win.each do |diagonal|
+      if diagonal.include?("xxxx")
+        puts "Player wins!"
+        return true
+      end
+      if diagonal.include?("oooo")
+        puts "Computer wins!"
+        return true
+      end
+    end
   end
-  # require 'pry'; binding.pry
 
-#   def game
-#     @board.main_menu
-#     while @board.add_columns < 42 do
-#       if check_win == true
-#         break
-#       end
-#       @board.add_chip("player")
-#       @board.add_chip("computer")
-#     end
-#   end
+  def start_game
+    @board.main_menu
+    while @board.add_columns < 42 do
+      if check_win == true
+        break
+      end
+      @board.add_chip("player")
+      @board.add_chip("computer")
+    end
+  end
 end
