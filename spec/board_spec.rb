@@ -18,7 +18,7 @@ RSpec.describe Board do
     end
   end
 
-  xdescribe '#prints board' do
+  describe '#prints board' do
     it 'can render board' do
       expect(board.render_board).to be_a Array
     end
@@ -30,7 +30,7 @@ RSpec.describe Board do
     end
   end
 
-  xdescribe 'Adding pieces to the board' do
+  describe 'Adding pieces to the board' do
     it 'can add a chip to the correct column' do
       expect(board.cells[5][0].value).to eq(".")
       board.cells[5][0].value = "x"
