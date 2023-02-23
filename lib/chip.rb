@@ -3,7 +3,6 @@ class Chip
             
   def initialize
     @type = {"player" => "x", "computer" => "o"}
-    # require 'pry'; binding.pry
   end
 end
 

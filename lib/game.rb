@@ -71,12 +71,15 @@ class Game
   end
 
   def start_game
-    @board.main_menu
+    if @board.main_menu == false
+      return "Ok have a nice day"
+    end
     while @board.add_columns < 42 do
       if check_win == true
         break
       end
       @board.add_chip("player")
+      system('clear')
       @board.add_chip("computer")
     end
   end
