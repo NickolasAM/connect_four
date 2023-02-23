@@ -57,11 +57,25 @@ class Board
   end
 
   def main_menu
-    puts "Welcome to Connect4!" #Add ASCCI Art
+    puts "
+    ██████╗ ██████╗ ███╗   ██╗███╗   ██╗███████╗ ██████╗████████╗    ██╗  ██╗
+   ██╔════╝██╔═══██╗████╗  ██║████╗  ██║██╔════╝██╔════╝╚══██╔══╝    ██║  ██║
+   ██║     ██║   ██║██╔██╗ ██║██╔██╗ ██║█████╗  ██║        ██║       ███████║
+   ██║     ██║   ██║██║╚██╗██║██║╚██╗██║██╔══╝  ██║        ██║       ╚════██║
+   ╚██████╗╚██████╔╝██║ ╚████║██║ ╚████║███████╗╚██████╗   ██║            ██║
+    ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═╝            ╚═╝
+                                                                             
+   "
     puts "Press P to play Connect4, Press Q to quit"
     start = gets.chomp.upcase
+    start_array = ["P","Q"]
+    if start_array.include?(start) == false
+      puts "Press P to play Connect4, Press Q to quit"
+      start = "#{gets.chomp.upcase}"
+    end
     if start == "P"
       print_board
+      return true
     elsif start == "Q"
       puts "OK, Have A Nice Day!"
     end
@@ -70,7 +84,7 @@ class Board
 
 
   def add_chip(user) 
-    puts "what column do you want your piece in?"
+    puts "What column do you want your piece in?"
       location_array = ["A","B","C","D","E","F","G"]
       if user == "computer"
         location = location_array.sample
